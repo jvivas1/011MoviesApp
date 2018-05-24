@@ -1,0 +1,49 @@
+  <h1>Películas en cartelera</h1>
+  <hr>
+  <div class="row">
+    <div class="card-columns puntero">
+      <div class="card" [routerLink]="['/peliculas',peliculaPopular.id,'home']"  *ngFor="let peliculaPopular of peliculasCartelera | slice:0:7; let i=index;">
+        <img class="card-img" [src]="peliculaPopular | peliculaimagen" alt="Card image">
+        <div class="card-img-overlay">
+          <h5 class="card-title card-text-style">{{peliculaPopular.title}}</h5>
+        </div>
+      </div>
+      <div class="card">
+        <button  type="button" class="btn btn-outline-primary btn-block">
+          Lista completa ...
+        </button>
+      </div>
+    </div>
+  </div>
+  <h1>Populares</h1>
+  <hr>
+  <div class="row">
+    <div class="card-columns ">
+      <div class="card puntero" [routerLink]="['/peliculas',peliculaPopular.id,'home']" *ngFor="let peliculaPopular of peliculasPopulares | slice:0:7; let i=index;">
+        <img class="card-img" [src]="peliculaPopular | peliculaimagen" alt="Card image">
+        <div class="card-img-overlay">
+          <h5 class="card-title card-text-style">{{peliculaPopular.title}}</h5>
+        </div>
+      </div>
+      <div class="card">
+        <button  type="button" class="btn btn-outline-primary btn-block">
+          Lista completa ...
+        </button>
+      </div>
+    </div>
+  </div>
+  <h1>Populares entre los más pequeños</h1>
+  <hr>
+  <div class="row">
+    <div class="card-columns">
+      <div class="card puntero" [routerLink]="['/peliculas',peliculaPopular.id,'home']" *ngFor="let peliculaPopular of peliculasPopularesNinos | slice:0:7;let i=index;">
+        <img class="card-img" [src]="peliculaPopular | peliculaimagen" alt="Card image">
+        <div class="card-img-overlay">
+          <h5 class="card-title card-text-style">{{peliculaPopular.title}}</h5>
+        </div>
+      </div>
+      <button  type="button" class="btn btn-outline-primary btn-block">
+        Lista completa ...
+      </button>
+    </div>
+  </div>

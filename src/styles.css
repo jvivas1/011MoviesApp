@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+.main-container{
+  margin-top: 30px;
+}
+
+.card-text-style{
+  margin-top: 135px;
+  color:white;
+}
+
+.card-title-style{
+  color: yellow
+}
+.my-navbar{
+  z-index: 999;
+  background: none;
+  border: 0;
+  border-radius: 0;
+
+}
+.puntero{
+  cursor: pointer;
+}
+
+.my-jumbotron{
+  margin-top: -120px;
+  background-image: url("assets/img/slide1.jpg");
+  background-size: cover;
+  height: 100%;
+  min-height: 400px;
+}
+
+.transparent-input{
+  background-color:transparent !important;
+  border:none !important;
+  text-color:white;
+}
+
+.nav.navbar {
+  background: transparent;
+}
+/* change navbar-brand color */
+.navbar a.navbar-brand {
+  color: white;
+}
+/* change navbar-brand color on hover */
+.navbar a.navbar-brand:hover {
+  color: silver;
+}
+/*  change navbar li colors, also active one but not disabled one */
+.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: white;
+}
+/* change hamburger button border color */
+button.navbar-toggler.navbar-toggler-right {
+  border-color: white;
+}
+/* change navbar background on collapse */
+@media (max-width: 768px) {
+  nav.navbar {
+    background: black;
+  }
+}
+
+.icon-collapse {
+    /*overwriting*/
+    color: white;
+    font-size: 30px;
+}

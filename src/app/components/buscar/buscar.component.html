@@ -1,0 +1,18 @@
+<h1>Búsqueda</h1>
+<input type="text" [(ngModel)]="termino" name="termino" (keyup)="busqueda(termino)" [value]="termino"
+ placeholder="Introduce tu búsqueda..." class="form-control">
+<hr>
+<div class="alert alert-info" *ngIf="peliculas.length==0 && termino!=''">
+  <strong>Sin resultados con la búsqueda introducida: </strong> {{termino}}
+</div>
+<div class="card-columns" *ngIf="peliculas.length>0 && termino!=''">
+  <div class="card puntero" [routerLink]="['/peliculas',pelicula.id,'buscar']" *ngFor="let pelicula of peliculas; let i=index;">
+  <img class="card-img-top" [src]="pelicula | peliculaimagen" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{pelicula.title}}</h5>
+    <p class="card-text">{{pelicula.overview | slice:0:150}} ...</p>
+    <button [routerLink]="['/peliculas',pelicula.id,'buscar',termino]" type="button" class="btn btn-outline-primary btn-block">
+      Ver más
+    </button>
+  </div>
+</div>

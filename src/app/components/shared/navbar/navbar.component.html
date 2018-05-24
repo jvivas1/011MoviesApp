@@ -1,0 +1,27 @@
+<div class="header">
+  <nav class="navbar navbar-inverse navbar-expand-md justify-content-center my-navbar">
+      <a [routerLink]="['home']" routerLinkActive="active" class="navbar-brand d-flex w-50 mr-auto">
+        Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <i class="fa fa-align-justify icon-collapse"></i>
+      </button>
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+          <ul class="navbar-nav mx-auto w-100 justify-content-center">
+            <li class="nav-item">
+                <a class="navbar-brand" routerLinkActive="active" [routerLink]="['buscar']" routerLinkActive="active">Buscar</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search"
+                   placeholder="Introduce tu búsqueda..." aria-label="Search"  (keyup.enter)="buscar(buscarTexto.value)" #buscarTexto>
+                  <button class="btn btn-success my-2 my-sm-0" type="button"  (click)="buscar(buscarTexto.value)">Buscar</button>
+                </form>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <div class="jumbotron my-jumbotron">
+  </div>
+</div>
